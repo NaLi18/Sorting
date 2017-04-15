@@ -64,28 +64,6 @@ public class LinkedList{
   }
   }
 
-  //The found method that find a node that matches a String
-  public Number found(String str){
-     Number temp = null;
-    if(isEmpty()){
-      System.out.println("The list is empty");
-      return null;
-    }
-    else{
-      temp = root;
-      while(temp.getNext()!= null&& temp.getValue().compareTo(str) != 0){ 
-        temp = temp.getNext();
-      }
-      if(temp.getNext() == null){
-        System.out.println("the " +str+ " didn't exsit in the list");
-        temp = null;
-      }
-      else
-        System.out.println("Found "+ str +" in the list");
-    }
-    return temp;
-    }
-  
   public void switchNumbers(Number node){
      Number temp1 = node.getNext();
     Number temp2 = node.getPrev();
