@@ -2,14 +2,12 @@ public class Number
 {
   String str;
   Number next;
-  Number prev;
   /*
    * The constructor
    * @param name
    */
   public Number(String name){
     this.next = null;
-    this.prev = null;
     this.str = name;
   }
   /*
@@ -17,7 +15,6 @@ public class Number
    */
   public Number(){
     this.str = null;
-    this.prev = null;
     this.next = null;
   }
   /*
@@ -34,20 +31,7 @@ public class Number
   public Number getNext(){
     return this.next;
   }
-  /*
-   * The setPrev method set the previou node
-   * @param node
-   */
-  public void setPrev(Number node){
-    this.prev = node;
-  }
-  /*
-   * The getPrev method return the previou node
-   * @return 
-   */
-  public Number getPrev(){
-    return this.prev;
-  }
+ 
   /*
    * The getValue method return the value of node
    * @return 

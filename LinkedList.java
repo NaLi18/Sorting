@@ -51,22 +51,14 @@ public class LinkedList{
       size++;
       if(temp.getNext()==null){
         temp.setNext(newNumber);
-        newNumber.setPrev(temp);
       }
       else{
         newNumber.setNext(temp);
-        temp.getPrev().setNext(newNumber);
-        newNumber.setPrev(temp.getPrev());
-        temp.setPrev(newNumber);
       }
   }
   }
 */
   public void switchNumbers(Number node){
-     Number temp1 = node.getNext();
-    Number temp2 = node.getPrev();
-    temp1.setPrev(temp2);
-    temp2.setNext(temp1);
     size--;
   }
   
