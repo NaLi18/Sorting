@@ -38,7 +38,7 @@ public class LinkedList{
       //increment the size 
       size++;
   }
-  
+  /*
   //The insert method that insert a node in the list in alphabetical order 
   public void insert(String str){
     Number newNumber = new Number(str);
@@ -63,7 +63,7 @@ public class LinkedList{
       }
   }
   }
-
+*/
   public void switchNumbers(Number node){
      Number temp1 = node.getNext();
     Number temp2 = node.getPrev();
