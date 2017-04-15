@@ -102,7 +102,7 @@ public class LinkedList{
   }
   
   //The forward method that traverse the list forwards and print
-  public void forward(){
+  public void print(){
      Number temp = root;
      if(isEmpty()){
        System.out.println("The list is empty");
