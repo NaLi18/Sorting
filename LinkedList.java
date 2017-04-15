@@ -20,11 +20,9 @@ public class LinkedList{
     return this.root;
   }
   
-//The add method that add the new node to the list(fornt, middle, end)
   public void add(String str){
     //Creat a new Number object that has the value of the str
     Number newNumber = new Number(str);
-    
     //Check the list is empty or not
       if(this.isEmpty()){
         this.root = newNumber;
