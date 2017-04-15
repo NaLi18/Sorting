@@ -86,8 +86,7 @@ public class LinkedList{
     return temp;
     }
   
-  //The remove method that delete a node from the list. 
-  public void remove(Number node){
+  public void switchNumbers(Number node){
      Number temp1 = node.getNext();
     Number temp2 = node.getPrev();
     temp1.setPrev(temp2);
