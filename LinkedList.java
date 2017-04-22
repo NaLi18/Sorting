@@ -30,13 +30,24 @@ public class LinkedList{
       //add to the fornt of node list
       else{
         newNumber.setNext(root);
+        root.setPrev(newNumber);
         this.root = newNumber;
       }
       //increment the size 
       size++;
   }
-  
+  /**
+   * The switchNumber method swap the position of the two nodes
+   * @param data1
+   * @param data2
+   */
   public void switchNumbers(Number data1, Number data2){
+    Number temp = data1.getPrev();
+    temp.setNext(data2);
+    data1.setPrev(data2);
+    data1.setNext(data2.getNext());
+    data2.setNext(data1);
+    data2.setPrev(temp);
   }
   public void bubbleSort(){
     
