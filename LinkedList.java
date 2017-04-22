@@ -42,35 +42,38 @@ public class LinkedList{
    * @param data2
    */
   public void switchNumbers(Number data1, Number data2){
-    Number temp = data1.getPrev();
-    if(temp == null){
+    if(data1.getPrev() == null){
       data1.setNext(data2.getNext());
       data2.setNext(data1);
+      data1.setPrev(data2);
       root = data2;
     }
     else{
-    temp.setNext(data2);
-    data1.setPrev(data2);
-    data1.setNext(data2.getNext());
-    data2.setNext(data1);
-    data2.setPrev(temp);
+      Number temp = data1.getPrev();
+      temp.setNext(data2);
+      data1.setNext(data2.getNext());
+      data2.setNext(data1);
+      data2.setPrev(temp);
+      data1.setPrev(data2);
     }
   }
   public void bubbleSort(){
     boolean swap = false;
     Number temp = root;
+    Number temp1 = root.getNext();
     while(!swap){
-    for(int i=1; i< size; i++){
-      if(temp.getValue() > temp.getNext().getValue()){
-        switchNumbers(temp, temp.getNext());
+    for(int i= 0; i<size; i++){
+      if(temp.getValue() > temp1.getValue()){
+        switchNumbers(temp, temp1);
         swap = true;
       }
       else{
-        temp = temp.getNext();
         swap = false;
       }
+        temp = temp1;
+        temp1 = temp1.getNext();
     }
-    }
+  }
   }
   // The destory method that delete/destroy the list
   public void destory(){
