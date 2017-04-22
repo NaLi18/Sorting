@@ -35,36 +35,25 @@ public class LinkedList{
       //increment the size 
       size++;
   }
-  /*
-  //The insert method that insert a node in the list in alphabetical order 
-  public void insert(String str){
-    Number newNumber = new Number(str);
-    Number temp = root;
-    if(this.isEmpty()){
-        this.root = newNumber;
-      }
-    else
-    {
-      while(temp.getValue().compareTo(str)<0 && temp.getNext() != null)
-          temp = temp.getNext();
-      size++;
-      if(temp.getNext()==null){
-        temp.setNext(newNumber);
-      }
-      else{
-        newNumber.setNext(temp);
-      }
-  }
-  }
-*/
-  public void switchNumbers(Number node){
-    size--;
-  }
   
+  public void switchNumbers(Number node){
+  }
+  public void bubbleSort(){
+  }
   // The destory method that delete/destroy the list
   public void destory(){
     root = null;
     size = 0;
+  }
+  //The pop method return and delete the top node of the list
+  public Number pop() {
+    if (this.isEmpty())
+      return null;
+    Number temp = this.root;
+    this.root = this.root.getNext();
+    temp.setNext(null);
+    this.size--;
+    return temp;
   }
   
   //The forward method that traverse the list forwards and print
