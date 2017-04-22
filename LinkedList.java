@@ -36,9 +36,10 @@ public class LinkedList{
       size++;
   }
   
-  public void switchNumbers(Number node){
+  public void switchNumbers(Number data1, Number data2){
   }
   public void bubbleSort(){
+    
   }
   // The destory method that delete/destroy the list
   public void destory(){

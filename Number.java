@@ -3,6 +3,7 @@ public class Number
   //Properties declare
   int number;
   Number next;
+  Number prev;
   /*
    * The constructor
    * @param name
@@ -10,6 +11,7 @@ public class Number
   public Number(int data){
     this.next = null;
     this.number = data;
+    this.prev = null;
   }
   /*
    * The non-argument constructor
@@ -17,6 +19,7 @@ public class Number
   public Number(){
     this.number = 0;
     this.next = null;
+    this.prev = null;
   }
   /*
    * The setNext method which set the nextNumber
@@ -26,11 +29,25 @@ public class Number
     this.next = node;
   }
   /*
+   * The setPrev method which set the nextNumber
+   * @param node
+   */
+  public void setPrev(Number node){ 
+    this.prev = node;
+  }
+  /*
    * The getNext method return the next node
    * @return 
    */
   public Number getNext(){
     return this.next;
+  }
+   /*
+   * The getPrev method return the next node
+   * @return 
+   */
+  public Number getPrev(){
+    return this.prev;
   }
  
   /*
