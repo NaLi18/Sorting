@@ -50,7 +50,20 @@ public class LinkedList{
     data2.setPrev(temp);
   }
   public void bubbleSort(){
-    
+    boolean swap = false;
+    Number temp = root;
+    while(!swap){
+    for(int i=1; i< size; i++){
+      if(temp.getValue() > temp.getNext().getValue()){
+        switchNumbers(temp, temp.getNext());
+        swap = true;
+      }
+      else{
+        temp = temp.getNext();
+        swap = false;
+      }
+    }
+    }
   }
   // The destory method that delete/destroy the list
   public void destory(){
