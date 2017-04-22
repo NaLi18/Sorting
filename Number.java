@@ -1,5 +1,6 @@
 public class Number
 {
+  //Properties declare
   int number;
   Number next;
   /*

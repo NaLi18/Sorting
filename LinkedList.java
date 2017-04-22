@@ -1,12 +1,11 @@
 public class LinkedList{
   //Declare appropriate variables.
   private Number root;
-  private int size;
+  private int size =0;
   
 // The default constructor
   public LinkedList(){
     root = null;
-    size = 0;
   }
   
 //The setRoot method that set the first node of the list
@@ -80,6 +79,7 @@ public class LinkedList{
         temp = temp.getNext();
      }
      temp.print();
+     System.out.println("");
      }
   }
   
