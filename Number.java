@@ -1,20 +1,20 @@
 public class Number
 {
-  String str;
+  int number;
   Number next;
   /*
    * The constructor
    * @param name
    */
-  public Number(String name){
+  public Number(int data){
     this.next = null;
-    this.str = name;
+    this.number = data;
   }
   /*
    * The non-argument constructor
    */
   public Number(){
-    this.str = null;
+    this.number = 0;
     this.next = null;
   }
   /*
@@ -36,20 +36,20 @@ public class Number
    * The getValue method return the value of node
    * @return 
    */
-  public String getValue(){
-    return this.str;
+  public int getValue(){
+    return this.number;
   }
   /*
    * The setValue method set the value of node
-   * @param x the string save in the node 
+   * @param x the number save in the node 
    */
-  public void setValue(String x){
-    this.str = x;
+  public void setValue(int data){
+    this.number = data;
   }
   /*
    * The print method display the value of the node 
    */
   public void print(){
-    System.out.println(this.str + " ");
+    System.out.println(this.number + " ");
   }
 }

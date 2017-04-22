@@ -20,9 +20,9 @@ public class LinkedList{
     return this.root;
   }
   
-  public void add(String str){
+  public void add(int number){
     //Creat a new Number object that has the value of the str
-    Number newNumber = new Number(str);
+    Number newNumber = new Number(number);
     //Check the list is empty or not
       if(this.isEmpty()){
         this.root = newNumber;
