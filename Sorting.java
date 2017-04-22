@@ -1,4 +1,22 @@
 import java.util.Random;
 public class Sorting{
-  Random rand = new Random();
+  public static void main(String[] args){
+    Random rand = new Random();
+    LinkedList list = new LinkedList();
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.print();
+  }
 }
