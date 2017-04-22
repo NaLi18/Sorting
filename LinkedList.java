@@ -43,11 +43,18 @@ public class LinkedList{
    */
   public void switchNumbers(Number data1, Number data2){
     Number temp = data1.getPrev();
+    if(temp == null){
+      data1.setNext(data2.getNext());
+      data2.setNext(data1);
+      root = data2;
+    }
+    else{
     temp.setNext(data2);
     data1.setPrev(data2);
     data1.setNext(data2.getNext());
     data2.setNext(data1);
     data2.setPrev(temp);
+    }
   }
   public void bubbleSort(){
     boolean swap = false;
