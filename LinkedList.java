@@ -50,6 +50,14 @@ public class LinkedList{
       data1.setPrev(data2);
       root = data2;
     }
+    else if(data2.getNext() == null){
+      Number temp = data1.getPrev();
+      temp.setNext(data2);
+      data2.setPrev(temp);
+      data2.setNext(data1);
+      data1.setPrev(data2);
+      data1.setNext(null);
+    }
     else{
       Number temp = data1.getPrev();
       Number temp1 = data2.getNext();
@@ -58,6 +66,7 @@ public class LinkedList{
       data2.setNext(data1);
       data1.setPrev(data2);
       data1.setNext(temp1);
+      temp1.setPrev(data1);
     }
   }
   public void bubbleSort(){
@@ -71,10 +80,10 @@ public class LinkedList{
             switchNumbers(temp, temp1);
           }
           temp = temp1;
-          temp1 = temp1.getNext();
+          temp1 = temp.getNext();
       }
       newSize--;
-      System.out.println("the newSize is"+newSize);
+      System.out.println("The newSize:"+ newSize);
       temp = root;
       temp1 = root.getNext();
     }
