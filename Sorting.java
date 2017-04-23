@@ -7,6 +7,10 @@ public class Sorting{
     list.add(rand.nextInt(100));
     list.add(rand.nextInt(100));
     list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
     list.print();
     list.bubbleSort();
     list.print();
