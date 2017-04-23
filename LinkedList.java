@@ -85,7 +85,6 @@ public class LinkedList{
           temp1 = temp.getNext();
       }
       newSize--;
-      System.out.println("The newSize:"+ newSize);
       temp = root;
       temp1 = root.getNext();
     }
