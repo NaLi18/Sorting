@@ -44,7 +44,9 @@ public class LinkedList{
   public void switchNumbers(Number data1, Number data2){
     
     if(data1.getPrev() == null){
-      data1.setNext(data2.getNext());
+      Number temp = data2.getNext();
+      data1.setNext(temp);
+      temp.setPrev(data1);
       data2.setNext(data1);
       data2.setPrev(null);
       data1.setPrev(data2);
