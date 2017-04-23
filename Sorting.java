@@ -9,6 +9,12 @@ public class Sorting{
     list.add(rand.nextInt(100));
     list.add(rand.nextInt(100));
     list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
+    list.add(rand.nextInt(100));
     System.out.println("The original list of the random numbers:");
     list.print();
     list.bubbleSort();
